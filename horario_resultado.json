@@ -1,0 +1,80 @@
+{
+  "jornada": {
+    "num_dias": 5,
+    "num_horas": 3,
+    "total_bloques": 15,
+    "dias": ["Lun", "Mar", "Mie", "Jue", "Vie"],
+    "horas": ["7-9", "9-11", "11-1"]
+  },
+  "resumen": {
+    "total_clases": 17,
+    "bloques_usados": 5,
+    "total_bloques": 15,
+    "aulas_usadas": 17,
+    "sin_aula": 0,
+    "ocupacion_promedio": 68.9
+  },
+  "materias": [
+    {"id": "CAL", "nombre": "Calculo", "prioridad": 3, "profesor_asignado": "Mendez"},
+    {"id": "ALG", "nombre": "Algebra", "prioridad": 2, "profesor_asignado": "Perez"},
+    {"id": "PRO", "nombre": "Programacion", "prioridad": 3, "profesor_asignado": "Ramos"},
+    {"id": "FIS", "nombre": "Fisica", "prioridad": 2, "profesor_asignado": "Torres"},
+    {"id": "BD", "nombre": "Bases_de_Datos", "prioridad": 3, "profesor_asignado": "Nakasima"},
+    {"id": "RED", "nombre": "Redes", "prioridad": 2, "profesor_asignado": "Gomez"},
+    {"id": "EDA", "nombre": "Estructuras_Datos", "prioridad": 3, "profesor_asignado": "Ramos"},
+    {"id": "SO", "nombre": "Sistemas_Op", "prioridad": 2, "profesor_asignado": "Gomez"},
+    {"id": "AA", "nombre": "Analisis_Algor", "prioridad": 3, "profesor_asignado": "Diaz"},
+    {"id": "IS", "nombre": "Ing_Software", "prioridad": 2, "profesor_asignado": "Diaz"},
+    {"id": "ETI", "nombre": "Etica", "prioridad": 1, "profesor_asignado": "Perez"},
+    {"id": "IHC", "nombre": "Interaccion_Humano_Computadora", "prioridad": 2, "profesor_asignado": "Garcia"},
+    {"id": "PS", "nombre": "Patrones_de_Software", "prioridad": 1, "profesor_asignado": "Garcia"}
+  ],
+  "profesores": [
+    {"nombre": "Lopez", "disponibilidad": "100110011101011", "materias": ["CAL"]},
+    {"nombre": "Mendez", "disponibilidad": "011111011011001", "materias": ["CAL", "ALG"]},
+    {"nombre": "Perez", "disponibilidad": "011011110111111", "materias": ["ALG", "ETI"]},
+    {"nombre": "Ramos", "disponibilidad": "001111111100000", "materias": ["PRO", "EDA"]},
+    {"nombre": "Torres", "disponibilidad": "100011110111011", "materias": ["FIS"]},
+    {"nombre": "Nakasima", "disponibilidad": "110111101111001", "materias": ["BD"]},
+    {"nombre": "Gomez", "disponibilidad": "110111000111001", "materias": ["RED", "SO"]},
+    {"nombre": "Diaz", "disponibilidad": "111110111100111", "materias": ["AA", "IS"]},
+    {"nombre": "Garcia", "disponibilidad": "111111111111111", "materias": ["IHC", "PS"]}
+  ],
+  "grupos": [
+    {"id": "1A", "alumnos": 2, "materias": ["CAL", "ALG", "PRO"]},
+    {"id": "1B", "alumnos": 32, "materias": ["FIS", "CAL", "PRO"]},
+    {"id": "2A", "alumnos": 24, "materias": ["BD", "RED", "EDA", "SO"]},
+    {"id": "2B", "alumnos": 22, "materias": ["SO", "BD"]},
+    {"id": "3A", "alumnos": 40, "materias": ["AA", "IS", "ETI"]},
+    {"id": "3B", "alumnos": 20, "materias": ["IHC", "PS"]}
+  ],
+  "aulas": [
+    {"nombre": "A101", "capacidad": 35},
+    {"nombre": "A102", "capacidad": 30},
+    {"nombre": "B201", "capacidad": 45},
+    {"nombre": "Lab1", "capacidad": 28}
+  ],
+  "incompatibles": [
+    {"a": "FIS", "b": "RED"},
+    {"a": "SO", "b": "ETI"}
+  ],
+  "clases": [
+    {"id": 0, "materia_id": "CAL", "materia_nombre": "Calculo", "prioridad": 3, "profesor": "Mendez", "grupo": "1A", "alumnos": 2, "bloque": 2, "dia": "Lun", "hora": "11-1", "aula": "A101", "capacidad": 35},
+    {"id": 1, "materia_id": "ALG", "materia_nombre": "Algebra", "prioridad": 2, "profesor": "Perez", "grupo": "1A", "alumnos": 2, "bloque": 1, "dia": "Lun", "hora": "9-11", "aula": "A102", "capacidad": 30},
+    {"id": 2, "materia_id": "PRO", "materia_nombre": "Programacion", "prioridad": 3, "profesor": "Ramos", "grupo": "1A", "alumnos": 2, "bloque": 4, "dia": "Mar", "hora": "9-11", "aula": "Lab1", "capacidad": 28},
+    {"id": 3, "materia_id": "FIS", "materia_nombre": "Fisica", "prioridad": 2, "profesor": "Torres", "grupo": "1B", "alumnos": 32, "bloque": 4, "dia": "Mar", "hora": "9-11", "aula": "A101", "capacidad": 35},
+    {"id": 4, "materia_id": "CAL", "materia_nombre": "Calculo", "prioridad": 3, "profesor": "Mendez", "grupo": "1B", "alumnos": 32, "bloque": 1, "dia": "Lun", "hora": "9-11", "aula": "A101", "capacidad": 35},
+    {"id": 5, "materia_id": "PRO", "materia_nombre": "Programacion", "prioridad": 3, "profesor": "Ramos", "grupo": "1B", "alumnos": 32, "bloque": 3, "dia": "Mar", "hora": "7-9", "aula": "A101", "capacidad": 35},
+    {"id": 6, "materia_id": "BD", "materia_nombre": "Bases_de_Datos", "prioridad": 3, "profesor": "Nakasima", "grupo": "2A", "alumnos": 24, "bloque": 3, "dia": "Mar", "hora": "7-9", "aula": "A102", "capacidad": 30},
+    {"id": 7, "materia_id": "RED", "materia_nombre": "Redes", "prioridad": 2, "profesor": "Gomez", "grupo": "2A", "alumnos": 24, "bloque": 0, "dia": "Lun", "hora": "7-9", "aula": "A102", "capacidad": 30},
+    {"id": 8, "materia_id": "EDA", "materia_nombre": "Estructuras_Datos", "prioridad": 3, "profesor": "Ramos", "grupo": "2A", "alumnos": 24, "bloque": 2, "dia": "Lun", "hora": "11-1", "aula": "A102", "capacidad": 30},
+    {"id": 9, "materia_id": "SO", "materia_nombre": "Sistemas_Op", "prioridad": 2, "profesor": "Gomez", "grupo": "2A", "alumnos": 24, "bloque": 1, "dia": "Lun", "hora": "9-11", "aula": "Lab1", "capacidad": 28},
+    {"id": 10, "materia_id": "SO", "materia_nombre": "Sistemas_Op", "prioridad": 2, "profesor": "Gomez", "grupo": "2B", "alumnos": 22, "bloque": 3, "dia": "Mar", "hora": "7-9", "aula": "Lab1", "capacidad": 28},
+    {"id": 11, "materia_id": "BD", "materia_nombre": "Bases_de_Datos", "prioridad": 3, "profesor": "Nakasima", "grupo": "2B", "alumnos": 22, "bloque": 0, "dia": "Lun", "hora": "7-9", "aula": "Lab1", "capacidad": 28},
+    {"id": 12, "materia_id": "AA", "materia_nombre": "Analisis_Algor", "prioridad": 3, "profesor": "Diaz", "grupo": "3A", "alumnos": 40, "bloque": 0, "dia": "Lun", "hora": "7-9", "aula": "B201", "capacidad": 45},
+    {"id": 13, "materia_id": "IS", "materia_nombre": "Ing_Software", "prioridad": 2, "profesor": "Diaz", "grupo": "3A", "alumnos": 40, "bloque": 1, "dia": "Lun", "hora": "9-11", "aula": "B201", "capacidad": 45},
+    {"id": 14, "materia_id": "ETI", "materia_nombre": "Etica", "prioridad": 1, "profesor": "Perez", "grupo": "3A", "alumnos": 40, "bloque": 2, "dia": "Lun", "hora": "11-1", "aula": "B201", "capacidad": 45},
+    {"id": 15, "materia_id": "IHC", "materia_nombre": "Interaccion_Humano_Computadora", "prioridad": 2, "profesor": "Garcia", "grupo": "3B", "alumnos": 20, "bloque": 0, "dia": "Lun", "hora": "7-9", "aula": "A101", "capacidad": 35},
+    {"id": 16, "materia_id": "PS", "materia_nombre": "Patrones_de_Software", "prioridad": 1, "profesor": "Garcia", "grupo": "3B", "alumnos": 20, "bloque": 2, "dia": "Lun", "hora": "11-1", "aula": "Lab1", "capacidad": 28}
+  ]
+}

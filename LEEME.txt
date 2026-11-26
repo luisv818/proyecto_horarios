@@ -1,0 +1,17 @@
+OPTIMIZADOR DE HORARIOS ACADEMICOS
+
+Compilar en la carpeta:
+   gcc -O2 -o motor_horarios.exe datos.c horarios.c api_bridge.c
+
+Ejecuta la interfaz grafica:
+   python interfaz.py
+
+COMO EXPANDIR EL HORARIO
+   Editar 'datos.txt'
+   En la primera seccion 'JORNADA <dias> <horas_por_dia>' poner, por ejemplo:
+      JORNADA 5 3
+      Lun Mar Mie Jue Vie
+      7-9 9-11 11-13
+   Asegurarse de que la mascara de bits sea de dias * bloques al dia, ejemplo 5 dias * 3 bloques = 15bits
+   Materias (hasta 100), profesores (hasta 50), grupos (hasta 40) aulas (hasta 14)
+   Presiona 'Recalcular Horario (Ejecutar C)' en la interfaz grafica
